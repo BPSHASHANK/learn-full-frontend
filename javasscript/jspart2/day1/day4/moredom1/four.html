@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more on DOM</title>
+</head>
+<body style="background-color: black;
+color:white">
+<ul class="languages">
+    <li>java</li>
+</ul>
+    
+</body>
+<script>
+    function add1(lang){
+       const li= document.createElement('li')
+       li.innerHTML=`${lang}`
+       document.querySelector('.languages').appendChild(li)
+    }
+add1("python")
+add1("jquery")
+//node while dealing with huge data the optimization problem ouurs in an real life so we need to use a another menthd
+ function add2(lang){
+    const li=document.createElement('li')
+    li.appendChild(document.createTextNode(lang))
+    document.querySelector('.languages').appendChild(li)
+    
+ }
+ add2("javascript")
+ //edit the code
+ const secondlang=document.querySelector("li:nth-child(2)")
+ //secondlang.innerHTML="mojo"
+ //optimized methon while dealing with the huge amount of data
+ const data=document.createElement('li')
+ data.textContent="mojo"
+ secondlang.replaceWith(data)
+ //another example for the edit
+ const secondlanauge=document.querySelector("li:nth-child(2)")
+ //secondlanauge.innerHTML="abcd" -->
+ //another method for
+ const data1=document.createElement('li')
+ data1.textContent="bcbcbc"
+secondlanauge.replaceWith(data1)
+
+//another example
+
+const seclan=document.querySelector("li:nth-child(3)")
+const d=document.createElement('li')
+d.textContent="shashank"
+seclan.replaceWith(d)
+const removethis= document.querySelector("li:nth-child(3)")
+removethis.remove()
+
+//lets change the outer html
+const ab=document.querySelector("li:nth-child(1)")
+const abcd=documnet.createElement("li")
+abcd.textContent="outerhl"
+ab.replaceWith(abcd)
+
+//another
+
+const ac=document.querySelector("li:nth-child(3)")
+ac.outerHTML="<li>new outer html</li>";
+//lets know about the remove
+const removelast=document.querySelector("li:nth-child(2)")
+removelast.remove()
+
+
+</script>
+
+</html>
