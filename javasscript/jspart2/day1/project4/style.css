@@ -1,0 +1,18 @@
+*{padding:0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: black;
+    color:wheat
+}
+.container{
+    width: 50%;
+    height: 80vh;
+    padding: 134px;
+}
+#sub{
+    cursor: pointer;
+    color: black ;
+}
