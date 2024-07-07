@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="imagesoone" src="images/bg.jpg" alt="imageone1"></li>
+            <li><img width="200px" id="imagetwo" src="images/child.png" alt="imageone2"></li>
+            <li><img width="200px" id="imagethree" src="images/grl.jpg" alt="imageone3"></li>
+            <li><img width="200px" id="imagefour" src="images/stranger.png" alt="imageone4"></li>
+<li><a href="imsges.com" id="anylink"style="color: red;">link</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //<!-- document.getElementById("imagethree").onclick=function(){
+    //    alert("clickthird") -->
+
+    //we can use this method also but its not a correct WebAssembly
+
+document.getElementById('images').addEventListener('click',function(e){
+    console.log(e)
+
+    //type,timestamp,defaultPrevent,
+    //target,toElemnt
+    //source element,current target
+    //client position,screenx,y etc
+    //altkey,cntrlkey
+      
+},false)
+document.getElementById('imagethree').addEventListener('click',function(e){
+    console.log(e)
+    e.stopPropagation()
+},false)
+document.getElementById('anylink').addEventListener('click',function(e){
+    console.log(e)
+    e.preventDefault()
+    e.stopPropagation()
+
+},false)
+</script>
+</html>
